@@ -1,0 +1,11 @@
+# Aliases
+alias gac="git add --all && git commit -v -m"
+alias gs="git switch"
+alias pa="php artisan"
+alias m="git checkout master"
+alias d="git checkout develop"
+alias wpadmin="/Users/eivin-landa/Tools/wpadmin/wpadmin.php"
+alias bump="/Users/eivin-landa/Tools/package-tools/artisan bump"
+alias tb="~/Tools/tailorbird/builds/tailorbird"
+alias obsidian="cd '/Users/eivin-landa/Library/Mobile Documents/iCloud~md~obsidian/Documents'"
+alias brush="git commit -v -m \"🧹💨\""
