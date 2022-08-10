@@ -1,11 +1,19 @@
 # Aliases
-alias gac="git add --all && git commit -v -m"
+alias wpadmin=$HOME/Tools/wpadmin/wpadmin.php
+alias bump=$HOME/Tools/package-tools/artisan bump
+
+# Git
+alias gac="git add -A && git commit -v -m"
 alias gs="git switch"
-alias pa="php artisan"
-alias m="git checkout master"
-alias d="git checkout develop"
-alias wpadmin="/Users/eivin-landa/Tools/wpadmin/wpadmin.php"
-alias bump="/Users/eivin-landa/Tools/package-tools/artisan bump"
-alias tb="~/Tools/tailorbird/builds/tailorbird"
-alias obsidian="cd '/Users/eivin-landa/Library/Mobile Documents/iCloud~md~obsidian/Documents'"
 alias brush="git commit -v -m \"🧹💨\""
+alias m="git checkout main"
+alias d="git checkout develop"
+
+# Tailorbird
+alias tb=$HOME/.composer/vendor/bin/tailorbird
+
+# Laravel
+alias pa='php artisan'
+
+# Composer
+alias c='composer'
