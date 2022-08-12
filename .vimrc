@@ -2,6 +2,8 @@
 " Show hidden files when using ctrl+p
 let g:ctrlp_show_hidden = 1
 
+hi CocFloating ctermfg=white ctermbg=darkblue
+
 "" ctr+n will open and close NERDTree
 nnoremap <C-N> :NERDTreeToggle<CR>
 "" <leader> + o will open NERDTree in the file your editing
@@ -15,6 +17,7 @@ call plug#begin()
 
 " Fuzzy file finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Git support inside vim (useing :G)
 Plug 'tpope/vim-fugitive'
@@ -23,7 +26,6 @@ Plug 'tpope/vim-fugitive'
 " [IMPORTANT] Install language servers using vim:
 " :CocInstall coc-json coc-tsserver coc-phpls coc-html coc-css coc-tailwind
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
 
 " PHP Support
 Plug 'stanangeloff/php.vim'
@@ -117,16 +119,13 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <C-@> coc#refresh()
+inoremap <silent><expr> <C-Space> coc#refresh()
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
