@@ -14,6 +14,9 @@ nmap <C-P> :FZF<CR>
 
 call plug#begin()
 " Plugins
+" Air Line - VIM status bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Fuzzy file finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -24,7 +27,7 @@ Plug 'tpope/vim-fugitive'
 
 " LSP Support & code autocompletion
 " [IMPORTANT] Install language servers using vim:
-" :CocInstall coc-json coc-tsserver coc-phpls coc-html coc-css coc-tailwind
+" :CocInstall coc-json coc-tsserver coc-phpls coc-html coc-css coc-tailwindcss
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " PHP Support
