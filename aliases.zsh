@@ -17,3 +17,5 @@ alias pa='php artisan'
 
 # Composer
 alias c='composer'
+
+alias week='date "+%Y-%m-%dT%H:%M:%S%z Week %V"'
