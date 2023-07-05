@@ -1,6 +1,7 @@
 # Aliases
 alias wpadmin=$HOME/Tools/wpadmin/wpadmin.php
 alias bump=$HOME/Tools/package-tools/artisan bump
+alias p='php $HOME/Scripts/playground/artisan'
 
 # Git
 alias gac="git add -A && git commit -v -m"
@@ -19,3 +20,4 @@ alias pa='php artisan'
 alias c='composer'
 
 alias week='date "+%Y-%m-%dT%H:%M:%S%z Week %V"'
+alias gp1='git push --set-upstream origin $(echo -n `git rev-parse --abbrev-ref HEAD`)'
