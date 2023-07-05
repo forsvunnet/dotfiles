@@ -6,5 +6,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.gitignore $HOME/.gitignore
 
-brew install fzf the_silver_searcher
+brew install fzf the_silver_searcher nvim croc
 
