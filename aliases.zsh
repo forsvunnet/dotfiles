@@ -23,3 +23,4 @@ alias week='date "+%Y-%m-%dT%H:%M:%S%z Week %V"'
 alias gp1='git push --set-upstream origin $(echo -n `git rev-parse --abbrev-ref HEAD`)'
 alias vim=nvim
 alias ovim=/usr/bin/vim
+alias pstorm=phpstorm
