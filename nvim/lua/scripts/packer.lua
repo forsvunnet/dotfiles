@@ -9,6 +9,12 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'theprimeagen/harpoon'
     use('mbbill/undotree')
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
     use('tpope/vim-surround')
     use('2072/vim-syntax-for-PHP')
 

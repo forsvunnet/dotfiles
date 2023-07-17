@@ -2,8 +2,9 @@
 --  Set leader to space " "
 vim.g.mapleader = " "
 
--- Ex = Explore
+-- Ex = ExplorDTreeFocus
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>n", ':NvimTreeOpen')
 
 -- Made a php shortcut in order to fix indentation. Later learned
 -- that the indentation problem came from treesitter 🤦
@@ -48,8 +49,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-end)
+    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts) end)
 
 -- Flash
 vim.keymap.set("n", "s", function()
@@ -74,3 +74,19 @@ end)
 --         }, Char.motions[motion]))
 --     end)
 -- end
+
+-- Define the keymap function
+function _G.move_cursor_right()
+    local line = vim.fn.getline('.')
+    local text_after_cursor = line:sub(vim.fn.col('.'))
+
+    if text_after_cursor:match('^%)') then
+        vim.cmd([[normal! l]])
+    else
+        vim.api.nvim_feedkeys(')', 'n', true)
+    end
+end
+
+-- Set the keymap in insert mode
+vim.keymap.set('i', ')', '<cmd>lua move_cursor_right()<CR>', { silent = true })
+
