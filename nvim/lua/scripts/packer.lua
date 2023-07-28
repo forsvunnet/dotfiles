@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'theprimeagen/harpoon'
     use('mbbill/undotree')
+    use( 'saadparwaiz1/cmp_luasnip' )
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -17,6 +18,7 @@ return require('packer').startup(function(use)
     }
     use('tpope/vim-surround')
     use('2072/vim-syntax-for-PHP')
+    use ('saadparwaiz1/cmp_luasnip')
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -33,6 +35,7 @@ return require('packer').startup(function(use)
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
             -- Autocompletion
+            {'saadparwaiz1/cmp_luasnip'},
             {'hrsh7th/nvim-cmp'},     -- Required
             {'hrsh7th/cmp-nvim-lsp'}, -- Required
             {'L3MON4D3/LuaSnip'},     -- Required

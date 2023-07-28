@@ -38,7 +38,26 @@ lsp.setup()
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
+require("luasnip.loaders.from_snipmate").lazy_load({paths = "~/.config/nvim/snippets"})
+
 cmp.setup({
+    snippet = {
+      expand = function(args)
+        require'luasnip'.lsp_expand(args.body)
+      end
+    },
+    sources = {
+        -- {name = 'nvim_lsp'},
+        -- {name = 'luasnip'},
+        -- {name = 'cmp_luasnip'},
+        -- {name = 'path'},
+        {name = 'nvim_lsp'},
+        -- {name = 'buffer', keyword_length = 3},
+        {name = 'luasnip',  option = { 
+            show_autosnippets = true,
+            use_show_condition = false
+        }},
+    },
     mapping = {
         -- `Enter` key to confirm completion
         ['<CR>'] = cmp.mapping.confirm({select = true}),
