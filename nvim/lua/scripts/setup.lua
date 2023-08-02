@@ -1,6 +1,8 @@
 -- Relative line numbers
 vim.wo.relativenumber = true
-
+-- Remove automatic comments on new lines
+vim.cmd('autocmd BufEnter * set formatoptions-=r formatoptions-=c formatoptions-=o')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=r formatoptions-=c formatoptions-=o')
 -- Darcula
 vim.cmd.colorscheme('darcula')
 
@@ -18,6 +20,36 @@ require'nvim-treesitter.configs'.setup {
         enable = true
     }
 }
+
+vim.filetype.add({
+    pattern = {
+        ['.*blade.php'] = 'blade'
+    }
+})
+
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.blade = {
+    install_info = {
+        url = "https://github.com/EmranMR/tree-sitter-blade",
+        files = {"src/parser.c"},
+        branch = "main",
+    },
+    filetype = "blade"
+}
+
+local bladeFiletype = vim.api.nvim_create_augroup("BladeFiltypeRelated", {})
+--   au BufNewFile,BufRead *.blade.php set ft=blade
+vim.api.nvim_create_autocmd(
+    {"BufNewFile","BufRead"},
+    {
+        pattern = '*.blade',
+        callback = function ()
+            vim.opt.ft = 'blade'
+        end,
+        group = bladeFiletype
+    }
+)
+
 
 -- LSP zero
 local lsp = require('lsp-zero').preset({})
@@ -38,13 +70,15 @@ lsp.setup()
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
-require("luasnip.loaders.from_snipmate").lazy_load({paths = "~/.config/nvim/snippets"})
+require("luasnip.loaders.from_snipmate").lazy_load({paths = "~/.config/nvim/snippets/snipmate"})
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets/lua"})
+
 
 cmp.setup({
     snippet = {
-      expand = function(args)
-        require'luasnip'.lsp_expand(args.body)
-      end
+        expand = function(args)
+            require'luasnip'.lsp_expand(args.body)
+        end
     },
     sources = {
         -- {name = 'nvim_lsp'},
