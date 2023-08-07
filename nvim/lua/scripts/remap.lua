@@ -93,12 +93,17 @@ local function skipKey(key)
         end
     end
 end
+
+
+vim.keymap.set('i', '<A-s>', '<Esc>:w<Enter>a')
+vim.keymap.set('n', '<A-s>', ':w<Enter>')
+
 --# Set the keymap in insert mode
-vim.keymap.set( 'i', ')', skipKey(')') , { silent = true })
-vim.keymap.set( 'i', '"', skipKey('"') , { silent = true })
-vim.keymap.set( 'i', ']', skipKey(']') , { silent = true })
-vim.keymap.set( 'i', ';', skipKey(';') , { silent = true })
-vim.keymap.set( 'i', '}', skipKey('}') , { silent = true })
+-- vim.keymap.set( 'i', ')', skipKey(')') , { silent = true })
+-- vim.keymap.set( 'i', '"', skipKey('"') , { silent = true })
+-- vim.keymap.set( 'i', ']', skipKey(']') , { silent = true })
+-- vim.keymap.set( 'i', ';', skipKey(';') , { silent = true })
+-- vim.keymap.set( 'i', '}', skipKey('}') , { silent = true })
 
 local function isVendorDirectoryPresent(current_dir, recursion_limit)
     -- Check if the "vendor" directory exists in the current directory
