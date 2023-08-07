@@ -1,8 +1,8 @@
 -- Relative line numbers
 vim.wo.relativenumber = true
 -- Remove automatic comments on new lines
-vim.cmd('autocmd BufEnter * set formatoptions-=r formatoptions-=c formatoptions-=o')
-vim.cmd('autocmd BufEnter * setlocal formatoptions-=r formatoptions-=c formatoptions-=o')
+vim.cmd('autocmd BufEnter * set formatoptions-=r formatoptions-=c formatoptions-=o title')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=r formatoptions-=c formatoptions-=o title')
 -- Darcula
 vim.cmd.colorscheme('darcula')
 
@@ -49,7 +49,6 @@ vim.api.nvim_create_autocmd(
         group = bladeFiletype
     }
 )
-
 
 -- LSP zero
 local lsp = require('lsp-zero').preset({})
