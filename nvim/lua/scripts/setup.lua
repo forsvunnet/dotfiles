@@ -113,7 +113,7 @@ vim.opt.list = true
 vim.opt.timeoutlen = 500
 -- vim.opt.listchars = '>-'
 -- vim.opt.trail = 'x'
-
+require'lspconfig'.svelte.setup{}
 --
 -- Note:
 -- Rust/Cargo located at: %USERPROFILE%\.cargo\bin
