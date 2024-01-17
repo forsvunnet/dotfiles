@@ -9,3 +9,5 @@ ln -s $HOME/dotfiles/.gitignore $HOME/.gitignore
 brew install fzf the_silver_searcher nvim croc zoxide
 
 eval "$(zoxide init zsh)"
+
+git config --global push.autoSetupRemote true
