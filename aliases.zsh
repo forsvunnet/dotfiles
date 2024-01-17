@@ -1,12 +1,14 @@
 # Aliases
 alias wpadmin=$HOME/Tools/wpadmin/wpadmin.php
-alias bump=$HOME/Tools/package-tools/artisan bump
+alias bump='$HOME/Tools/package-tools/artisan bump'
 alias p='php $HOME/Scripts/playground/artisan'
 
 # Git
 alias gac="git add -A && git commit -v -m"
 alias gs="git switch"
 alias brush="git commit -v -m \"🧹💨\""
+alias gab="git add -A && git commit -v -m \"🧹💨\""
+alias gabp="git add -A && git commit -v -m \"🧹💨\" && git push"
 alias m="git checkout main"
 alias d="git checkout develop"
 
@@ -24,3 +26,18 @@ alias gp1='git push --set-upstream origin $(echo -n `git rev-parse --abbrev-ref 
 alias vim=nvim
 alias ovim=/usr/bin/vim
 alias pstorm=phpstorm
+
+# Laravel
+alias a='php artisan'
+alias am='php artisan migrate'
+alias amf='php artisan migrate:fresh'
+alias amr='php artisan migrate:rollback'
+alias am:migration='php artisan make:migration'
+alias am:component='php artisan make:component --view'
+alias am:componentc='php artisan make:component'
+alias am:compontenti='php artisan make:component --inline'
+alias am:command='php artisan make:command'
+alias am:model='php artisan make:model'
+alias am:controller='php artisan make:model'
+alias am:data='php artisan make:data'
+

@@ -8,7 +8,7 @@ vim.cmd.colorscheme('darcula')
 
 -- Treesitter
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "lua", "vim", "rust", "php", "javascript", "typescript", "json" },
+    ensure_installed = { "c", "lua", "vim", "rust", "go", "php", "javascript", "typescript", "json" },
     sync_install = false,
     auto_install = true,
 
