@@ -1,4 +1,5 @@
-require('scripts.packer')
-require('scripts.nvimtree')
+-- require('scripts.')
+
+require('scripts.blade')
 require('scripts.remap')
 require('scripts.setup')
