@@ -9,3 +9,5 @@ rustup update
 cargo install zoxide --locked
 
 eval "$(zoxide init zsh)"
+
+git config --global push.autoSetupRemote true
