@@ -1,14 +1,20 @@
 -- Relative line numbers
 vim.wo.relativenumber = true
+vim.wo.number = true
+
+-- Conceal level (for Obsidian, etc..)
+vim.opt.conceallevel = 1
+
 -- Remove automatic comments on new lines
 vim.cmd('autocmd BufEnter * set formatoptions-=r formatoptions-=c formatoptions-=o title')
 vim.cmd('autocmd BufEnter * setlocal formatoptions-=r formatoptions-=c formatoptions-=o title')
+
 -- Darcula
 vim.cmd.colorscheme('darcula')
 
 -- Treesitter
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "lua", "vim", "rust", "go", "php", "javascript", "typescript", "json" },
+    ensure_installed = { "markdown", "c", "lua", "vim", "rust", "go", "php", "javascript", "typescript", "json" },
     sync_install = false,
     auto_install = true,
 

@@ -7,7 +7,7 @@ vim.opt.termguicolors = true
 
 -- empty setup using defaults
 require("nvim-tree").setup(
-    {
+   {
         git = {
             enable = true,
             ignore = false,
