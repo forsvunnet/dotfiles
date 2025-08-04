@@ -3,7 +3,7 @@ ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.gitignore $HOME/.gitignore
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 
-brew install fzf the_silver_searcher nvim croc 
+brew install fzf the_silver_searcher nvim croc tmux
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup update
