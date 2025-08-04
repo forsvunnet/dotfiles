@@ -9,11 +9,10 @@ vim.opt.conceallevel = 1
 vim.cmd('autocmd BufEnter * set formatoptions-=r formatoptions-=c formatoptions-=o title')
 vim.cmd('autocmd BufEnter * setlocal formatoptions-=r formatoptions-=c formatoptions-=o title')
 
+require("mason").setup()
 
 require("luasnip.loaders.from_snipmate").lazy_load({paths = "~/.config/nvim/snippets/snipmate"})
 require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets/lua"})
-
-
 
 vim.opt.expandtab = true
 vim.opt.autoindent = true
@@ -24,7 +23,8 @@ vim.opt.list = true
 vim.opt.timeoutlen = 500
 -- vim.opt.listchars = '>-'
 -- vim.opt.trail = 'x'
-require'lspconfig'.svelte.setup{}
+-- require'lspconfig'.svelte.setup{}
+-- require'lspconfig'.gopls.setup{}
 --
 -- Note:
 -- Rust/Cargo located at: %USERPROFILE%\.cargo\bin

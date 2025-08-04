@@ -1,4 +1,9 @@
+--# Map leader
+vim.g.mapleader = " " --  Set leader to space " "
+vim.g.maplocalleader = "," --  Set leader to space " "
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
     "git",
