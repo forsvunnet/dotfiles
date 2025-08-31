@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader>n", '<cmd>NvimTreeFindFile<CR>') -- Find file
 
 -- Space + = will reindent the entire file
 vim.keymap.set("n", "<leader>=", "gg=G''")
+vim.keymap.set("n", "<localleader>=", ":!cljfmt fix %<CR>:e!<CR>")
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -46,6 +47,7 @@ local lsp = require("lsp-zero")
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts) -- Go to definition
+    vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts) -- Go to definition
     vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.rename() end, opts) -- Rename
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts) -- Tooltip
     
