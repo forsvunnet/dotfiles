@@ -25,15 +25,19 @@ vim.keymap.set("n", "<localleader>=", ":!cljfmt fix %<CR>:e!<CR>")
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>o', builtin.find_files, {}) -- Find files
-vim.keymap.set('n', '<C-p>', builtin.git_files, {}) -- Git files
+
+vim.keymap.set('n', '<C-p>', function() -- Git files
+    builtin.git_files({cwd = vim.fn.getcwd()}, {use_git_root=false})
+end)
 vim.keymap.set('n', '<C-f>', function() -- Grep string
     builtin.grep_string({search = vim.fn.input("Grep > ")});
 end)
+vim.keymap.set("n", "<leader>a", builtin.buffers) -- Mark file
 
 -- Harpoon
 local mark = require('harpoon.mark');
 local ui = require('harpoon.ui');
-vim.keymap.set("n", "<leader>a", mark.add_file) -- Mark file
+vim.keymap.set("n", "<leader>m", mark.add_file) -- Mark file
 vim.keymap.set("n", "<leader>e", ui.toggle_quick_menu) -- Toggle files
 vim.keymap.set("n", "<leader>j", function() ui.nav_file(1) end) -- File 1
 vim.keymap.set("n", "<leader>k", function() ui.nav_file(2) end) -- File 2
