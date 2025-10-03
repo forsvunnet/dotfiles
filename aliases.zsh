@@ -118,3 +118,5 @@ noclear() {
   echo -e "\033[34mContents of '$file_path' cleared.\033[0m"
 }
 
+alias yoff='launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.koekeishiya.yabai.plist'
+alias yon='launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.koekeishiya.yabai.plist'
