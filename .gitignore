@@ -3,3 +3,5 @@ tags
 .idea
 .env.bak
 .phpactor.json
+.clj-kondo
+node_modules
