@@ -1,5 +1,5 @@
 -- require('scripts.')
-
+-- require('scripts.lsp')
 require('scripts.blade')
 require('scripts.remap')
 require('scripts.setup')

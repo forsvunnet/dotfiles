@@ -5,3 +5,4 @@ tags
 .phpactor.json
 .clj-kondo
 node_modules
+order-service/resources/public/
