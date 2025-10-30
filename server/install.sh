@@ -5,6 +5,9 @@ sudo apt update
 sudo apt install zoxide zsh lnav neovim fzf tmux
 sudo npm i intelephense -g
 
+## Change users shell
+sudo chsh $USERNAME -s /bin/zsh
+
 # User
 ## Install om-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -1,1 +1,5 @@
 set surround
+let mapleader = "\<SPACE>"
+ nnoremap <Leader>/ :nohlsearch<cr>
+ vnoremap <leader>p "_dP
+ nmap <Leader>n :NERDTreeToggle<CR>

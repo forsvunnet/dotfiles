@@ -1,3 +1,9 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="ys"
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
 # Git
 alias gac="git add -A && git commit -v -m"
 alias gs="git switch"
