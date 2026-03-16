@@ -37,6 +37,8 @@ alias vim=nvim
 alias ovim=/usr/bin/vim
 alias pstorm=phpstorm
 
+alias cljf="php $HOME/dotfiles/cljfmt.php"
+
 # Laravel
 alias a='php artisan'
 alias am='php artisan migrate'
