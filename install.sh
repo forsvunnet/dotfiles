@@ -5,6 +5,7 @@ ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.gitignore $HOME/.gitignore
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/skills $HOME/.claude/skills
+ln -s $HOME/dotfiles/claude.settings.json $HOME/.claude/settings.json
 
 brew install fzf the_silver_searcher nvim croc tmux
 

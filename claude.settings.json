@@ -1,0 +1,16 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(npm install)",
+            "WebFetch(domain:[::1])",
+            "WebFetch(domain:localhost)",
+            "Bash(curl -s:*)",
+            "Bash(git pull)",
+            "Bash(grep:*)",
+            "Bash(brepl:*)",
+            "Bash(git add:*)",
+            "Bash(git checkout:*)",
+            "Bash(git rebase:*)"
+        ]
+    }
+}
