@@ -1,16 +1,55 @@
 {
-    "permissions": {
-        "allow": [
-            "Bash(npm install)",
-            "WebFetch(domain:[::1])",
-            "WebFetch(domain:localhost)",
-            "Bash(curl -s:*)",
-            "Bash(git pull)",
-            "Bash(grep:*)",
-            "Bash(brepl:*)",
-            "Bash(git add:*)",
-            "Bash(git checkout:*)",
-            "Bash(git rebase:*)"
-        ]
-    }
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "WebFetch(domain:[::1])",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s:*)",
+      "Bash(git pull)",
+      "Bash(grep:*)",
+      "Bash(brepl:*)",
+      "Bash(git add:*)",
+      "Bash(git checkout:*)",
+      "Bash(git rebase:*)",
+      "Read(/Users/eivinlanda/Clojure/outnordic/**)",
+      "Read(//private/etc/**)",
+      "Bash(echo:*)",
+      "Bash(xargs ls:*)",
+      "Bash(npm show:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/eivinlanda/Clojure/outnordic/asset-bundle/**)",
+      "Bash(done)",
+      "Read(//Users/eivinlanda/Clojure/outnordic/order-service/**)",
+      "Read(//Users/eivinlanda/Clojure/outnordic/**)",
+      "Bash(2)",
+      "Read(//Users/eivinlanda/.gitlibs/libs/johanwiren/relational/47c535d3c524e0661eb8cbdfe76df30de4e5af5a/src/johanwiren/**)",
+      "Bash(clojure -M:format! src/admin_extra/models/models.clj src/backopp/reprice/handler.clj src/backopp/reprice/v3.clj src/magegw/web/import_converter.clj src/outnordic/opp/pim/ai/prompts.clj src/outnordic/opp/pim/article/domain.clj src/outnordic/opp/pim/article/export_import/handlers.clj src/outnordic/opp/pim/article/handlers.clj src/outnordic/opp/pim/article/query.clj src/outnordic/opp/pim/attributes/handlers.clj src/outnordic/opp/pim/attributes/tools/z_gender.clj src/outnordic/opp/pim/attributes/transactions.clj src/outnordic/opp/pim/categories/core.clj src/outnordic/opp/pim/comments/handlers.clj src/outnordic/opp/pim/debug/sku_size_export.clj src/outnordic/opp/pim/dimensions/validation.clj src/outnordic/opp/pim/events.clj src/outnordic/opp/pim/jobs/es/core.clj src/outnordic/opp/pim/jobs/es/product_reindex.clj src/outnordic/opp/pim/openai/fine_tuning.clj src/outnordic/opp/pim/product/handlers.clj src/outnordic/opp/pim/prompts/handlers.clj src/outnordic/opp/pim/publish/handlers.clj src/outnordic/opp/pim/scripts/opp_1088_debug_crucial.clj src/outnordic/opp/pim/scripts/opp_1115_upload_sample_product_texts_to_Egmont.clj src/outnordic/opp/pim/scripts/opp_1116_update_meta_descriptions.clj src/outnordic/opp/pim/scripts/opp_1290_duplicate_eligible_markets.clj src/outnordic/opp/pim/scripts/opp_864_invalid_spec_names.clj src/outnordic/opp/pim/scripts/skittfiske/core.clj src/outnordic/opp/pim/scripts/skittfiske/list_empty_sf_categories.clj src/outnordic/opp/pim/scripts/skittfiske/opp_1412_assign_sf_collection_codes.clj src/outnordic/opp/pim/scripts/skittfiske/override_sf_subtypes.clj src/outnordic/opp/pim/scripts/update_fs_recommended_use_values.clj src/outnordic/opp/pim/text/handlers.clj src/outnordic/opp/pim/text/service.clj src/outnordic/opp/pim/text/view.clj)",
+      "Read(//Users/eivinlanda/.m2/**)",
+      "Bash(ls -1 /Users/eivinlanda/Workspace/elearning/app/Models/*.php)",
+      "Bash(xargs -I {} basename {} .php)",
+      "Bash(php artisan:*)",
+      "Bash(python3:*)",
+      "Bash(php /Users/eivinlanda/Workspace/elearning/artisan test tests/Feature/Actions/ExportStudentsCsvTest.php)",
+      "Bash(php /Users/eivinlanda/Workspace/elearning/artisan test tests/Feature/Actions/ExportStudentsCsvTest.php --no-ansi)",
+      "Bash(./vendor/bin/pest tests/Feature/Actions/ExportStudentsCsvTest.php)",
+      "Bash(vendor/bin/pest tests/Feature/Actions/ExportStudentsCsvTest.php --colors=never)",
+      "Bash(./vendor/bin/pest tests/Feature/Actions/ExportStudentsCsvTest.php --verbose)",
+      "Bash(./vendor/bin/pest)",
+      "Bash(./vendor/bin/pest --no-ansi)",
+      "Bash(./vendor/bin/pest --colors=never)",
+      "Bash(./vendor/bin/pest --bail)",
+      "Bash(./vendor/bin/pest --testsuite=Feature)",
+      "Bash(APP_ENV=testing ./vendor/bin/pest --testsuite=Feature)",
+      "Bash(./vendor/bin/pest tests/Feature/Actions/CreateNewUserTest.php)",
+      "Bash(./vendor/bin/pest \"tests/Feature/Actions/Fortify/CreateNewUserTest.php\")",
+      "Bash(./vendor/bin/pest --filter \"returns a csv response\")",
+      "Bash(./vendor/bin/pest \"tests/Feature/Actions/Fortify/CreateNewUserTest.php\" \"tests/Feature/Actions/ExportStudentsCsvTest.php\")",
+      "Bash(./vendor/bin/pest \"tests/Feature/Actions/Fortify/CreateNewUserTest.php\" \"tests/Feature/Actions/ExportStudentsCsvTest.php\" --filter \"returns a csv\")",
+      "WebSearch"
+    ]
+  },
+  "enabledPlugins": {
+    "lua-lsp@claude-plugins-official": true
+  }
 }

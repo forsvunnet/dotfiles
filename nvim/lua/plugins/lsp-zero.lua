@@ -1,67 +1,76 @@
 return {
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
     {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        lazy = true,
+        'hrsh7th/nvim-cmp',
         config = function()
+            local cmp = require('cmp')
+            local luasnip = require('luasnip')
 
-            local lsp_zero = require('lsp-zero')
-            lsp_zero.on_attach(function(client, bufnr)
-                -- see :help lsp-zero-keybindings
-                -- to learn the available actions
-                lsp_zero.default_keymaps({buffer = bufnr})
-            end)
-
-            -- LSP zero
-            lsp_zero.setup_servers( {
+            local servers = {
                 'clojure_lsp',
                 'gopls',
                 'lua_ls',
                 'rust_analyzer',
                 'intelephense',
                 'eslint'
+            }
+
+            vim.api.nvim_create_autocmd('LspAttach', {
+                callback = function(args)
+                    local bufnr = args.buf
+                    local opts = { buffer = bufnr }
+                    vim.keymap.set('n', 'K',   vim.lsp.buf.hover, opts)
+                    vim.keymap.set('n', 'gd',  vim.lsp.buf.definition, opts)
+                    vim.keymap.set('n', 'gD',  vim.lsp.buf.declaration, opts)
+                    vim.keymap.set('n', 'gi',  vim.lsp.buf.implementation, opts)
+                    vim.keymap.set('n', 'go',  vim.lsp.buf.type_definition, opts)
+                    vim.keymap.set('n', 'gr',  vim.lsp.buf.references, opts)
+                    vim.keymap.set('n', 'gs',  vim.lsp.buf.signature_help, opts)
+                    vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
+                    vim.keymap.set('n', '<F4>', vim.lsp.buf.code_action, opts)
+                    vim.keymap.set('n', 'gl',  vim.diagnostic.open_float, opts)
+                    vim.keymap.set('n', '[d',  vim.diagnostic.goto_prev, opts)
+                    vim.keymap.set('n', ']d',  vim.diagnostic.goto_next, opts)
+                end
             })
 
-            lsp_zero.setup()
-
-            local cmp = require('cmp')
-            local cmp_action = require('lsp-zero').cmp_action()
+            local capabilities = require('cmp_nvim_lsp').default_capabilities()
+            for _, server in ipairs(servers) do
+                vim.lsp.config(server, { capabilities = capabilities })
+                vim.lsp.enable(server)
+            end
 
             cmp.setup({
                 snippet = {
                     expand = function(args)
-                        require'luasnip'.lsp_expand(args.body)
+                        luasnip.lsp_expand(args.body)
                     end
                 },
                 sources = {
                     {name = 'nvim_lsp'},
-                    {name = 'clojure_lsp'},
-                    {name = 'cmp_luasnip'},
                     {name = 'path'},
-                    {name = 'nvim_lsp'},
                     {name = 'buffer', keyword_length = 3},
-                    {name = 'luasnip',  option = { 
+                    {name = 'luasnip', option = {
                         show_autosnippets = true,
                         use_show_condition = false
                     }},
                 },
                 mapping = {
-                    -- `Enter` key to confirm completion
                     ['<CR>'] = cmp.mapping.confirm({select = true}),
-
-                    -- Ctrl+Space to trigger completion menu
                     ['<C-Space>'] = cmp.mapping.complete(),
-
-                    -- Navigate between snippet placeholder
-                    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-                    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+                    ['<C-f>'] = cmp.mapping(function(fallback)
+                        if luasnip.jumpable(1) then luasnip.jump(1)
+                        else fallback() end
+                    end, {'i', 's'}),
+                    ['<C-b>'] = cmp.mapping(function(fallback)
+                        if luasnip.jumpable(-1) then luasnip.jump(-1)
+                        else fallback() end
+                    end, {'i', 's'}),
                 }
             })
         end
     },
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'},
     {

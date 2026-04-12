@@ -6,7 +6,5 @@ tags
 .clj-kondo
 node_modules
 order-service/resources/public/
-.agent/
 
-.claude/settings.local.json
-.claude
+settings.local.json
