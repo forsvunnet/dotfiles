@@ -11,6 +11,8 @@ Treat verification as its own judgment call. The user may want to test now, test
 
 Decouple work where you can. If parts of the task are independent, finish one before starting the next. If they're coupled, surface all the related decisions together so the user can make them in one pass.
 
+Treat answers as inputs, not endpoints. If the user picks a listed option cleanly, proceed. If they write a custom answer, edit a chosen option, or accept with conditions ("yes, but..."), re-read it for new decisions hiding inside. A custom answer often *replaces* one decision with several — surface those before continuing, don't paper over them with assumptions.
+
 ## Examples
 
 Below is a list of examples of how this skill should be used.
@@ -44,3 +46,21 @@ While working on the signup validation, a real decision comes up:
 > - ★ On submit (standard, less noisy)
 > - On blur for each field (catches errors earlier)
 > - Live as the user types (most responsive, can feel naggy)
+
+### A custom answer that opens new decisions
+
+You ask:
+> Where should the admin warning appear when built assets are missing?
+> - ★ On the admin dashboard only
+> - Globally, on every page
+> - In server logs only
+
+The user answers: *"Global, but make sure it's removed in the deployed code."*
+
+Don't just implement "global warning." The second clause introduces a new decision the user hasn't actually made — *how* to strip it from production. Ask:
+
+> Use `AskUserQuestion`:
+> How should the warning be excluded from the deployed build?
+> - ★ Wrap in a dev-only environment check (`if (import.meta.env.DEV)`)
+> - Strip via build config (e.g., a Vite/webpack define plugin)
+> - Use a feature flag the deploy pipeline disables

@@ -46,10 +46,18 @@
       "Bash(./vendor/bin/pest --filter \"returns a csv response\")",
       "Bash(./vendor/bin/pest \"tests/Feature/Actions/Fortify/CreateNewUserTest.php\" \"tests/Feature/Actions/ExportStudentsCsvTest.php\")",
       "Bash(./vendor/bin/pest \"tests/Feature/Actions/Fortify/CreateNewUserTest.php\" \"tests/Feature/Actions/ExportStudentsCsvTest.php\" --filter \"returns a csv\")",
-      "WebSearch"
+      "WebSearch",
+      "Skill(step-by-step)",
+      "Skill(step-by-step:*)",
+      "Skill(grill-me-with-docs)",
+      "Skill(grill-me-with-docs:*)",
+      "Bash(tree -L2 backopp/src/outnordic/opp/pim/attributes)",
+      "Bash(bb test *)"
     ]
   },
+  "model": "opus",
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true
-  }
+  },
+  "effortLevel": "high"
 }

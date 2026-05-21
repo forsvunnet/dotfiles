@@ -8,3 +8,11 @@ node_modules
 order-service/resources/public/
 
 settings.local.json
+backopp/.agent/skills/role-check
+backopp/.claude/skills
+0tasks
+.agents/skills/task-*
+CLAUDE.local.md
+
+.agents/skills/commit
+.agents/skills/ui-architecture
