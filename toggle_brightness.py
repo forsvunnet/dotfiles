@@ -30,7 +30,7 @@ def find_display_id():
 
 def set_brightness(display_id, value):
     subprocess.run(
-        ["m1ddc", "set", "luminance", str(value), "-d", str(display_id)],
+        ["m1ddc", "display", str(display_id), "set", "luminance", str(value)],
         check=True, capture_output=True,
     )
 

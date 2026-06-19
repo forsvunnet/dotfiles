@@ -7,6 +7,7 @@
       "Bash(curl -s:*)",
       "Bash(git pull)",
       "Bash(grep:*)",
+      "Bash(sed:*)",
       "Bash(brepl:*)",
       "Bash(git add:*)",
       "Bash(git checkout:*)",
@@ -52,12 +53,21 @@
       "Skill(grill-me-with-docs)",
       "Skill(grill-me-with-docs:*)",
       "Bash(tree -L2 backopp/src/outnordic/opp/pim/attributes)",
-      "Bash(bb test *)"
+      "Bash(bb test *)",
+      "Bash(./vendor/bin/phpunit tests/Feature/DevLoginTest.php)",
+      "Bash(rm -f /tmp/schedule_test.sqlite)",
+      "Bash(touch /tmp/schedule_test.sqlite)",
+      "Bash(export DB_CONNECTION=sqlite DB_DATABASE=/tmp/schedule_test.sqlite DB_FOREIGN_KEYS=true)",
+      "Read(//Users/eivinlanda/.claude/skills/grill-with-docs/**)",
+      "Read(//Users/eivinlanda/dotfiles/skills/grill-with-docs/**)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   },
-  "model": "opus",
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "model": "opus"
 }

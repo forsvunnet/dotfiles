@@ -11,8 +11,14 @@ settings.local.json
 backopp/.agent/skills/role-check
 backopp/.claude/skills
 0tasks
-.agents/skills/task-*
+.agents/skills/task-worker
+.agents/skills/write-task
+.agents/skills/new-module
 CLAUDE.local.md
 
 .agents/skills/commit
 .agents/skills/ui-architecture
+.lsp
+ploogins
+settings.local.json
+deploy_local.sh

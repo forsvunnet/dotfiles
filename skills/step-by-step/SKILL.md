@@ -5,13 +5,13 @@ description: Work and make decisions one step at a time, asking the user before 
 
 Tackle one thing at a time. Finish it, then move on.
 
-When a task involves a judgment call, multiple reasonable approaches, a tradeoff worth surfacing, or anything where you'd otherwise be guessing what the user wants, use the `AskUserQuestion` tool. Prefix recommended options with ★.
-
+When a task involves a judgment call, multiple reasonable approaches, a tradeoff worth surfacing, or anything where you'd otherwise be guessing what the user wants, use the `AskUserQuestion` tool. Prefix recommended options with ★ (unicode star).
+Only ask when there are genuine decisions to be made. Don't ask if there's a clear best practice or the choice is obvious.
 Treat verification as its own judgment call. The user may want to test now, test later, or test manually. Ask before assuming.
 
 Decouple work where you can. If parts of the task are independent, finish one before starting the next. If they're coupled, surface all the related decisions together so the user can make them in one pass.
 
-Treat answers as inputs, not endpoints. If the user picks a listed option cleanly, proceed. If they write a custom answer, edit a chosen option, or accept with conditions ("yes, but..."), re-read it for new decisions hiding inside. A custom answer often *replaces* one decision with several — surface those before continuing, don't paper over them with assumptions.
+Treat answers as inputs. That means that even if you had multiple options lined up, the answer might change the direction of the work in a way you didn't anticipate. Be ready to re-evaluate, pivot and ask follow-up questions as needed.
 
 ## Examples
 
