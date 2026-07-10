@@ -30,6 +30,9 @@ alias pa='php artisan'
 
 # Composer
 alias c='composer'
+alias cu='composer update'
+alias ci='composer install'
+alias cr='composer require'
 
 alias week='date "+%Y-%m-%dT%H:%M:%S%z Week %V"'
 alias gp1='git push --set-upstream origin $(echo -n `git rev-parse --abbrev-ref HEAD`)'
