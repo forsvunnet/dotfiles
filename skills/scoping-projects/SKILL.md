@@ -3,8 +3,13 @@ name: scoping-projects
 description: Interview the user into a written mission statement, style guide and build phases before any code exists. Use when starting a new project or sub-project, when a request is bigger than a single change, or when the user asks to agree on what something is before building it.
 ---
 
-Nothing gets built until the project is described in files the user has read and
-agreed to.
+Write the project as prose at descending levels of abstraction. The whole thing
+in a sentence first, then what it is made of, then how those parts are written,
+then the order they arrive in. Each document sits at one level and stays there.
+Nothing skips ahead.
+
+None of it gets built until those documents exist and the user has read and
+agreed to them.
 
 ## The artifacts
 
@@ -18,16 +23,43 @@ do. One page. If it does not fit on a page, the project is not understood yet.
 error handling, what a new contributor has to copy. Written after the shape of
 the thing is settled and before any of it exists.
 
-**The phases.** What order it gets built in, and why that order. Which phase
-first makes the thing prove itself end to end.
+**The phases.** What order it gets built in, and why that order.
 
 Commit all three before writing code. They are the first deliverable, not a
 preamble to it.
 
-## Look at the real system before deciding anything
+## Placing a sentence
 
-Read what already exists. The old scripts, the config files, what is actually
-installed on the machine, what the last attempt left behind.
+Prose, not lists. A list lets decisions sit side by side without ever saying how
+they relate, and a paragraph that will not come out is the discovery.
+
+To place a sentence, ask whether it would still be true after everything below it
+were replaced. "The run never waits" survives swapping the language, so it is
+mission. "Install PHP through Homebrew" dies with that choice, so it belongs a
+layer down.
+
+Leaking is the failure mode, and it runs both ways. Detail drifting up makes the
+mission fragile, so a decision one layer down forces a rewrite of the page above.
+The mission restated in the style guide leaves two documents claiming the same
+thing, and they rot apart.
+
+## The first phase is a walking skeleton
+
+Phase one builds the thinnest version that runs end to end. Real structure, no
+useful work. Enough that the user can watch the whole shape move.
+
+This exists because agreement is not correctness. A page both people are happy
+with can still be wrong about the world. The mission is a hypothesis until
+something runs, and the sooner it runs the less there is to unpick.
+
+## Go and see
+
+Read what already exists before deciding anything. The old scripts, the config
+files, what is actually installed on the machine, what the last attempt left
+behind.
+
+The name is Toyota's, for the rule that you do not reason about the factory
+floor from the office. You go and stand on it.
 
 It will not match what anyone remembers. A script that has not been run in two
 years, a config file nothing loads, a tool that arrived as somebody else's
