@@ -68,6 +68,6 @@
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true
   },
-  "effortLevel": "high",
+  "effortLevel": "medium",
   "model": "opus"
 }

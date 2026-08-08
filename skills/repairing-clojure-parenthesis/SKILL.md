@@ -1,5 +1,5 @@
 ---
-name: clojure-parenthesis-repair
+name: repairing-clojure-parenthesis
 description: "Fixes unbalanced parentheses, brackets, and braces in Clojure, ClojureScript, and EDN files using brepl. Use when encountering delimiter errors, never fix manually."
 ---
 

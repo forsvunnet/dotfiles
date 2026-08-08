@@ -1,5 +1,5 @@
 ---
-name: grill-with-docs
+name: grilling-with-docs
 description: Grilling session that challenges your plan against the existing DICTIONARY model, sharpens terminology, and updates documentation (DICTIONARY.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.
 ---
 

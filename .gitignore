@@ -22,3 +22,4 @@ CLAUDE.local.md
 ploogins
 settings.local.json
 deploy_local.sh
+.claude/worktrees/
