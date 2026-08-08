@@ -1,0 +1,13 @@
+# Where each config file belongs. First column is inside this repo, second is
+# inside your home folder. Read by mac-setup and by server/install.sh, so
+# neither has to keep its own copy.
+
+.zshrc                  .zshrc
+.vimrc                  .vimrc
+.ideavimrc              .ideavimrc
+.tmux.conf              .tmux.conf
+.gitignore              .gitignore
+nvim                    .config/nvim
+ghostty                 .config/ghostty
+skills                  .claude/skills
+claude.settings.json    .claude/settings.json
