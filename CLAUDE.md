@@ -70,6 +70,7 @@ Examples:
 
 If the User references prior work, Claude asks the User to paste the relevant context.
 Do not speculate about what may have been discussed before.
+If you are inklined towards writing a memory file, ask the user if you should before doing so.
 
 ## Serve intent, not phrasing
 

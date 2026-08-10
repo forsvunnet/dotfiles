@@ -65,9 +65,10 @@
       "/tmp"
     ]
   },
+  "model": "opus",
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true
   },
   "effortLevel": "medium",
-  "model": "opus"
+  "theme": "auto"
 }
