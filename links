@@ -12,3 +12,4 @@ ghostty                 .config/ghostty
 skills                  .claude/skills
 claude.settings.json    .claude/settings.json
 CLAUDE.md               .claude/CLAUDE.md
+output-styles           .claude/output-styles

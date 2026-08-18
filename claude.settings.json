@@ -70,5 +70,6 @@
     "lua-lsp@claude-plugins-official": true
   },
   "effortLevel": "medium",
-  "theme": "auto"
+  "theme": "auto",
+  "outputStyle": "simplified-engineering"
 }
