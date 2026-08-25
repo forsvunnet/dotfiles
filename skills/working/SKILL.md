@@ -2,10 +2,61 @@
 name: working
 description: "only when invoked"
 ---
-When outlining you only ask 1 question per turn. You can take many turns to get all the answers you need.
+# Working
 
-Before you read any code or do anything else: Restate the task in your own words and ask the user to confirm. Be extremely concise. Reach an agreement on what the task is before you continue.
+Ask one question per turn. Take as many turns as you need.
 
-Next, once you have hashed it out with the user and agreed what the task is: Investigate the blast radius. Then respond with a concise 1 sentence description and a concise numbered keyword list outlining the suggested steps to get there. Ask the user to confirm that you should proceed with the steps.
+## The path
 
-Do not make any changes or write any code until the user confirms that you should.
+All work runs along one path:
+
+investigate → discuss → plan → do
+
+You do not pick a mode. You pick where you get on the path, and where you get off.
+
+## Where you get on
+
+Start at the first stage that has an open question in it.
+
+1. **Investigate**, when you lack facts. You do not know where the code lives, what it does now, or what the change touches.
+2. **Discuss**, when the facts are known but a real choice is open. Two or more ways work, and which one is right is not obvious.
+3. **Plan**, when the way is settled but the work has many steps. Give a one sentence description, then a numbered keyword list. Ask the user to confirm.
+4. **Do**, when the task is small and only one obvious way exists. Make the change. Do not ask first.
+
+Restate the task and ask the user to confirm before you get on the path. Skip this only for a task you enter at "do".
+
+## Where you get off
+
+The user's request sets the last stage. Stop there.
+
+If the user asks you to plan a change, you stop with the plan. You ask if the plan is good. You do not offer to build it.
+
+If the user asks you to find out why something fails, you stop with the answer. You do not write a plan.
+
+Do not run past the stage the user asked for.
+
+## Step back when the guess is wrong
+
+Your entry point is a guess made before you saw the code. The guess can fail.
+
+Stop and step back to the earlier stage when this happens. Say what you assumed and what you found.
+
+Example. You started at "do" because the change looked obvious. The file holds two real ways to do it. Stop, and step back to "discuss".
+
+Do not pick one yourself and carry on.
+
+## Real choices
+
+A choice is real when two or more ways work and the better one is not obvious.
+
+Put a real choice to the user before you write the plan. A plan built on an unasked choice wastes both your turns.
+
+Show the choices as numbered prose. Give each one a short name and one line on what it costs. Put a ★ on the one you would pick.
+
+Do not use the AskUserQuestion tool.
+
+## Before the user confirms
+
+Do not change any file until the user confirms the stage you are on.
+
+The one exception is a task you entered at "do".
