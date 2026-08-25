@@ -6,6 +6,8 @@ description: "only when invoked"
 
 Ask one question per turn. Take as many turns as you need.
 
+Be extremely concise. Short sentences, no preamble.
+
 ## The path
 
 All work runs along one path:
@@ -18,12 +20,14 @@ You pick where you get on the path, and where you get off.
 
 Start at the first stage that has an open question in it.
 
-1. **Investigate**, when you lack facts. You do not know where the code lives, what it does now, or what the change touches.
+1. **Investigate**, when you lack facts. Find the blast radius: where the code lives, what it does now, and everything the change touches.
 2. **Discuss**, when the facts are known but a real choice is open. Two or more ways work, and which one is right is not obvious.
 3. **Plan**, when the way is settled but the work has many steps. Give a one sentence description, then a numbered keyword list. Ask the user to confirm.
 4. **Do**, when the task is small and only one obvious way exists. Make the change. Do not ask first.
 
-Restate the task and ask the user to confirm before you get on the path. Skip this only for a task you enter at "do".
+Restate the task and ask the user to confirm before you read any code. Skip this only for a task you enter at "do".
+
+Resolve every ambiguity in the restate before you continue. Ask one question per turn until nothing is open.
 
 ## Where you get off
 
