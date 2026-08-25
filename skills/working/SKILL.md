@@ -40,6 +40,8 @@ If the user asks you to find out why something fails, you stop with the answer. 
 
 Do not run past the stage the user asked for.
 
+When the last stage is unclear, do not ask which one it is. Stop at the earlier stage.
+
 ## Step back when the guess is wrong
 
 Your entry point is a guess made before you saw the code. The guess can fail.
