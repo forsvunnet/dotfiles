@@ -4,7 +4,8 @@ description: "only when invoked"
 ---
 # Working
 
-Ask one question per turn. Take as many turns as you need.
+Ask one question per turn. Asking the user to confirm is a question.
+If you want to ask more, do it in the next turn. Take as many turns as you need.
 
 Be extremely concise. Short sentences, no preamble.
 
@@ -58,6 +59,21 @@ Put a real choice to the user before you write the plan. A plan built on an unas
 Show the choices as numbered prose. Give each one a short name and one line on what it costs. Put a ★ on the one you would pick.
 
 Do not use the AskUserQuestion tool.
+
+## Choices that are not real
+
+A choice is not real when you already know the better answer. Take it yourself.
+Say what you did in one line. Do not ask.
+
+Examples of choices that are not real:
+
+- how to split the commits
+- what to name a commit, a branch, or a local variable
+- which file an obvious helper goes in
+- whether to leave an unrelated dirty file out of a commit
+
+State the decision as done, not as a question. "Two commits: X, then Y."
+The user corrects you if it is wrong. That costs one turn. Asking always costs one turn.
 
 ## Before the user confirms
 
