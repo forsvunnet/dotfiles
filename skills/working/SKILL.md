@@ -12,7 +12,7 @@ All work runs along one path:
 
 investigate → discuss → plan → do
 
-You do not pick a mode. You pick where you get on the path, and where you get off.
+You pick where you get on the path, and where you get off.
 
 ## Where you get on
 

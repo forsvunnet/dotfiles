@@ -69,7 +69,8 @@
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true
   },
+  "outputStyle": "simplified-engineering",
   "effortLevel": "medium",
   "theme": "auto",
-  "outputStyle": "simplified-engineering"
+  "agentPushNotifEnabled": true
 }
