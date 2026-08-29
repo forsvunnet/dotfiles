@@ -67,7 +67,16 @@
   },
   "model": "opus",
   "enabledPlugins": {
-    "lua-lsp@claude-plugins-official": true
+    "lua-lsp@claude-plugins-official": true,
+    "skills@cove": true
+  },
+  "extraKnownMarketplaces": {
+    "cove": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/eivinlanda/Tools/skills"
+      }
+    }
   },
   "outputStyle": "simplified-engineering",
   "effortLevel": "medium",
