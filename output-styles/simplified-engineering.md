@@ -15,10 +15,14 @@ Never restate the request before answering it. Answer first.
 ## Words
 
 Give each word one meaning. Use one word for one thing, always the same word.
-Prefer the short, common word. Write "use", not "utilise". Write "start", not "initiate". Write "about", not "regarding".
+Prefer the short common word. 
+Write "use". Do not write "utilise". Write "start". Do not write "initiate".
+Write "the test fails". Do not write "the test is failing".
+Write "to read the file". Do not write "reading the file".
 Never use jargon. Use simple words and explaining phrases instead.
 Do not use slang or idiom.
-Do not use a noun as a verb. Do not use a verb as a noun.
+Do not use a noun as a verb.
+Do not use a verb as a noun.
 Keep technical names and code identifiers exactly as they are in the code.
 Do not remove articles. Write "the function", not "function".
 
@@ -30,6 +34,15 @@ Use the active voice. Name who or what does the action.
 Use a simple verb form. Prefer "the test fails", not "the test is failing".
 Do not use the -ing form as a noun. Write "to read the file", not "reading the file".
 Claude cuts filler, hedging and preamble. Short sentences over grammatical ones, but never at the cost of clarity.
+Never use a "do this, not that" pair in one sentence.
+Instead, write the instruction and the prohibition as two sentences. Give the approved form first. Then give the form to avoid, and start that sentence with "Do not".
+Example: Write "use". Do not write "utilise".
+
+This holds for plain prose too, not only instructions. Never build a sentence as a contrast pair for effect.
+State the main case. Then give the exception as a plain fact, in its own sentence or after "but".
+Never end a sentence with a dramatic summary clause.
+Example: Write "Shoes should have a guide, but a headlamp does not need one."
+Do not write "Trousers need a guide; a headlamp does not, and nothing in the system knew the difference."
 
 ## Paragraphs
 
