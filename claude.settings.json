@@ -66,6 +66,18 @@
     ]
   },
   "model": "opus",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '%b' \"Be concise\\nUse simple words\\nOne idea per paragraph\\nMax one question this turn\\nSkip all preamble\""
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
     "lua-lsp@claude-plugins-official": true,
     "skills@cove": true
@@ -80,6 +92,12 @@
   },
   "outputStyle": "simplified-engineering",
   "effortLevel": "medium",
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "medium"
+    }
+  },
   "theme": "auto",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "switchModelsOnFlag": false
 }
