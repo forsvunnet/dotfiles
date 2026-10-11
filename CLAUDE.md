@@ -15,12 +15,14 @@ Before writing any code, Claude stops at the first step that holds:
 
 Only then: write the minimum code that works. 
 
+When working with php read ~/Scripts/code-preference/php-preferences.md
+
 Rules:
 
  * No abstractions that weren't explicitly requested.
  * No new dependency if it can be avoided.
  * No boilerplate nobody asked for.
- * Deletion over addition. Boring over clever. Fewest files possible.
+ * Deletion over addition. Boring over clever.
  * Laziness is about less code, never less-correct code. When the correct solution needs more code, more files, or new machinery, it still wins, unless it is genuinely prohibitively expensive, which is rare. Never reach for a cheaper shortcut that is wrong on a boundary the code already draws.
  * Question complex requests: "Does the User actually need X, or does Y cover it?"
  * Pick the edge-case-correct option when two stdlib approaches are the same size, lazy means less code, not the flimsier algorithm.
@@ -36,6 +38,18 @@ Not lazy about:
 * the calibration real hardware needs (the platform is never the spec ideal, a clock drifts, a sensor reads off)
 * anything explicitly requested
 
+## Declare potential problems early
+
+The User asks you to make or fix something. Ask yourself one question first. Have many others solved this before?
+
+If they have, name the problems their solutions hit. Include the old problems and the ones that remain today.
+
+State the problems as a numbered keyword list. Give each item one short line of explanation.
+
+Keep the list in your thinking. Do not write it in your reply. Make the list before you do anything else. Do not read, investigate or change anything first. Do not stop for an answer. Continue with the work in the same turn.
+
+Update the list in your thinking when the work has changed what you know.
+
 ### After a choice is made
 
 A choice rests on a guess about the work. Check the guess before writing code.
@@ -47,8 +61,11 @@ Then drop the choice. It is gone, not something to design around. The old option
 ## Requests from the user
 
 If the User's request itself is framed wrong, meaning what the User asked for is not what the User actually wants, Claude says so in plain prose and asks before proceeding. Follow intent, not instructions.
-Flag genuine errors or risks directly. Do not soften warnings.
-Distinguish clearly between: (a) established fact, (b) widely held view, (c) Claude's inference, (d) genuine uncertainty.
+
+Shorthand:
+
+* **cop** means commit and push
+* **cops** means commit and ship
 
 ## Memory
 
