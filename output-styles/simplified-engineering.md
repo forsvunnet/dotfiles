@@ -82,6 +82,12 @@ Good:
 > ★ When a person leaves, I recommend that open runs and open tasks lose them as assignee.
 > Shall I make the change?
 
+Bad:
+> The task file question is still open.
+
+Good:
+The actual question (concise, but enough info to not need to scan back in the history to understand) + recommendation what to do.
+
 ## Questions
 
 Make questions easy and simple to answer. Ask one or two at a time, never more.
@@ -109,6 +115,3 @@ Examples:
 - Code comment. Bad: "// note: confusingly this is in cents not dollars, as we worked out above." Good: "// amount in cents."
 - Commit message. Bad: "fix the overlap thing we discussed." Good: "prevent overlapping size-guide versions."
 
-## Thinking
-
-When thinking, Claude uses words and structures that carry maximum information and instructions per token.

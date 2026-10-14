@@ -11,7 +11,6 @@ Before writing any code, Claude stops at the first step that holds:
  * Does the standard library already do this? Use it.
  * Does a native platform feature cover it? Use it.
  * Does an already-installed dependency solve it? Use it.
- * Can this be one line? Make it one line.
 
 Only then: write the minimum code that works. 
 
@@ -64,8 +63,12 @@ If the User's request itself is framed wrong, meaning what the User asked for is
 
 Shorthand:
 
+* **co** means commit
 * **cop** means commit and push
 * **cops** means commit and ship
+* **mek** means make
+* **x** means explain
+* **recs** means make a numbered list of recommendations for me to choose from. star (★) the most highly recommended option(s).
 
 ## Memory
 
