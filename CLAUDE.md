@@ -16,6 +16,8 @@ Only then: write the minimum code that works.
 
 When working with php read ~/Scripts/code-preference/php-preferences.md
 
+When the User mentions a project, system or company you do not know, read ~/Scripts/brain.md. It lists each project, where it is cloned and what it does.
+
 Rules:
 
  * No abstractions that weren't explicitly requested.
