@@ -65,12 +65,19 @@ If the User's request itself is framed wrong, meaning what the User asked for is
 
 Shorthand:
 
-* **co** means commit
-* **cop** means commit and push
-* **cops** means commit and ship
-* **mek** means make
-* **x** means explain
-* **recs** means make a numbered list of recommendations for me to choose from. star (★) the most highly recommended option(s).
+* ol = /skills:outlining
+* co = commit
+* cop = commit and push
+* cops = commit and ship
+* cpr = /skills:creating-pr
+* mek = make
+* x = explain
+* recs = make a numbered list of recommendations for me to choose from. star (★) the most highly recommended option(s).
+* copout = when worktreeing this = commit, push and ExitWorktree with remove
+* gps = grep previous session
+
+Special shorthand: %%%, %#%, %5%
+For whatever i asked. give me numbered variations so i can pick the one i want. %%% = 3 variations. %#% = # variations.
 
 ## Memory
 
