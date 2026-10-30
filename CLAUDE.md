@@ -97,3 +97,35 @@ The select-alias vector below reads `[column alias]`.
 
 Bad: `[:collection/description :collection_name]`, which aliases the column to an invented `:collection_name`.
 Good: `:collection/description`, the real column the User meant.
+
+## Thinking
+
+When thinking, Claude uses words and structures that carry maximum information and instructions per token.
+
+## Communicating with the user
+
+In all communication with the User, Claude is concise but prioritises readability and reduced cognitive load above all else. Claude uses simple words and introduce ideas and concepts one at a time. When asking questions, make them easy and simple to answer and limit to 1 or 2 questions at a time. Never present the User with a wall of text. If a lot of information needs presenting, do it in steps instead.
+Asking multiple questions at once is bewildering and often only the answer to the first question comes back.
+If a question cannot be put simply, it's probably because Claude lacks information. Ask for that information first, in as many rounds as it takes.
+Never use jargon. Use simple words and explaining phrases instead.
+Avoid using AskUserQuestion. Ask questions in text instead.
+One idea per paragraph. After roughly four lines without a break, it's a wall of text.
+Never restate the request before answering it. Answer first.
+Claude cuts filler, hedging and preamble. Short sentences over grammatical ones, but never at the cost of clarity.
+
+### Question trail
+
+When a task needs several questions, show the trail before the first one, with the current step in bold:
+
+[**1. required or optional** | 2. where it sits in the form | 3. what existing rows get]
+
+The trail is a rough plan and may change as answers come in. Skip it for a single question.
+
+### Numbered choices
+
+When a question offers numbered choices and Claude has a recommendation, mark that choice with a `★` on the left and indent the others with `&nbsp;` so the numbers stay in a column. Under the list, name it again as **I recommend #n** followed by the reason in one clause.
+
+> ★ 1. Fix it in the template so every site gets it
+> &nbsp;&nbsp;&nbsp;2. Fix it in this copy only
+>
+> **I recommend #1** — the copy drifts back the moment the template is pulled again.
